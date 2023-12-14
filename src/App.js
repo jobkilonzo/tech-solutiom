@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Nav from './component/Nav';
+import { Contact, Footer, Home, Products, Portofolio, About} from './sections'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Nav />
+      <div>
+      <Home />
+      </div>
+      
+      <div className='xl:px-16'>
+        <Portofolio />
+      </div>
+      <div className="xl:px-16">
+        <Products />
+      </div>
+      <div  className="bg-pale-blue xl:px-16 ">
+        <Contact />
+      </div>
+      <div className='bg-red-500 pt-5 padding-x pb-8'>
+        <Footer />
+      </div>
     </div>
   );
 }
