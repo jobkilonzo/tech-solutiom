@@ -1,10 +1,14 @@
 import React from 'react'
 import { portofolios } from '../constant'
 import PortofolioCard from '../component/PortofolioCard'
-
-import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css/pagination';
+import { Swiper, SwiperSlide, autoplay } from 'swiper/react';
+// Import Swiper styles
 import 'swiper/css';
-import {Pagination} from 'swiper/modules'
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import {Autoplay, Navigation} from 'swiper/modules'
 
 const portofolio = () => {
   return (
@@ -15,10 +19,13 @@ const portofolio = () => {
      <Swiper
      spaceBetween={20}
      slidesPerView={2}
+     navigation 
+     loop
+     autoplay = {{delay: 2500}}
      pagination={{
                   clickable: true,
                 }}
-                modules={[Pagination]}
+                modules={[Navigation, Autoplay]}
                 className="mySwiper md:my-20 ">
      <div>
         {portofolios.map((item) => (

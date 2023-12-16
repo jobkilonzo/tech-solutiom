@@ -4,7 +4,7 @@ import ProductsCard from '../component/ProductsCard'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
-import {Pagination} from 'swiper/modules'
+import {Pagination, Autoplay} from 'swiper/modules'
 const Products = () => {
   return (
     <section id='products' className='my-20 max-container xsm:min-h-fit md:min-h-screen'>
@@ -15,10 +15,12 @@ const Products = () => {
         
                 spaceBetween={60}
                 slidesPerView={3}
+                autoplay = {{delay: 3000}}
+                loop
                 pagination={{
                   clickable: true,
                 }}
-                modules={[Pagination]}
+                modules={[Pagination, Autoplay]}
                 className="mySwiper md:my-20">
         <div className='sm:relative  sm:flex sm:flex-row sm:justify-between jusitfy-center font-mono xsm:flex-col xsm:items-center xsm:my-5'>
             {products.map((product)=> (

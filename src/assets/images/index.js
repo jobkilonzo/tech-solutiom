@@ -12,6 +12,7 @@ import fitclub from './fitclub.png'
 import kamulah from './kamulah.png'
 import home from './home.png'
 import editor from './editor.png'
+import learntech from './learntech.png'
 
 import logo from './logo.png'
 export {
@@ -23,7 +24,7 @@ export {
     graphic,
     cctv,
     web,
-
+    learntech,
     hendryshoes,
     fitclub,
     kamulah,
